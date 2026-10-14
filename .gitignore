@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Uploads
+server/uploads/
+
+# FAISS index
+ai_service/faiss_index/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+*.pyo
+*.pyd
+.Python
+ai_service/models/
+node_modules/
+
+
+
+venv/
+
+
+
+ai_service/models/
+
+
+
+.safetensors
+
+
+
+.bin
+
+
+
+*.pt

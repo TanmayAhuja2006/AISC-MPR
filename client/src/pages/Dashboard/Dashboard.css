@@ -1,0 +1,161 @@
+.dashboard {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.dashboard__hero {
+  padding: 4rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard__hero-inner { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.dashboard__hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  width: fit-content;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dashboard__hero-title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 900;
+  color: var(--color-text, #e2e8f0);
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.dashboard__hero-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard__hero-sub {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary, #94a3b8);
+  max-width: 580px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.dashboard__hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* Stats row */
+.dashboard__stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 0.7rem 1.1rem;
+}
+
+.stat-chip__icon { color: #6366f1; }
+.stat-chip__icon--green  { color: #22c55e; }
+.stat-chip__icon--yellow { color: #f59e0b; }
+.stat-chip__val   { font-size: 1.25rem; font-weight: 800; color: var(--color-text, #e2e8f0); }
+.stat-chip__label { font-size: 0.75rem; color: var(--color-text-muted, #64748b); }
+
+/* ── Main grid ────────────────────────────────────────────────── */
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.dashboard__section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+}
+
+/* ── Features ─────────────────────────────────────────────────── */
+.dashboard__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-card { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.feature-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card__title { font-size: 0.9375rem; font-weight: 700; color: var(--color-text, #e2e8f0); margin: 0; }
+.feature-card__desc  { font-size: 0.825rem; color: var(--color-text-secondary, #94a3b8); line-height: 1.6; margin: 0; }
+
+/* ── Sessions ─────────────────────────────────────────────────── */
+.dashboard__sessions { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.session-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: var(--color-text, #e2e8f0);
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: background 0.2s, border-color 0.2s;
+  text-align: left;
+}
+.session-row:hover { background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.3); }
+
+.session-row__icon  { color: #6366f1; flex-shrink: 0; }
+.session-row__title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.session-row__date  { font-size: 0.75rem; color: var(--color-text-muted, #64748b); flex-shrink: 0; }
+
+.dashboard__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  color: var(--color-text-muted, #64748b);
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed rgba(255,255,255,0.08);
+  border-radius: 14px;
+}
+
+@media (max-width: 900px) {
+  .dashboard__grid { grid-template-columns: 1fr; }
+}
